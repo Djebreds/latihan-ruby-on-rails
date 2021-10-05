@@ -1,0 +1,2 @@
+class Cobarail < ApplicationRecord
+end

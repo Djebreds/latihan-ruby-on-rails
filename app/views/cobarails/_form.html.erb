@@ -1,0 +1,42 @@
+<%= form_with(model: cobarail) do |form| %>
+  <% if cobarail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cobarail.errors.count, "error") %> prohibited this Friend from being saved:</h2>
+
+      <ul>
+        <% cobarail.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field mb-3">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name, class: "form-text" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name, class: "form-text" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-text" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :phone %>
+    <%= form.text_field :phone, class: "form-text" %>
+  </div>
+
+  <div class="field mb-3">
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter, class: "form-text" %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit class: "btn btn-success" %>
+  </div>
+<% end %>
